@@ -1,0 +1,10 @@
+#main > mat-form-field {
+  background-color: blue;
+}
+
+button {
+  background-color: rgb(180, 137, 21);
+  box-shadow: 5px 5px 10px;
+  border-radius: 5px;
+  margin: 0 85px 0 85px;
+}

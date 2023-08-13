@@ -1,0 +1,44 @@
+<div id="header-container">
+  <div id="header">
+    <div>
+      <img id="v2x" src="../../assets/V2X_White.webp" alt="v2x" />
+    </div>
+    <ul id="nav-bar">
+      <li>
+        <a routerLink="/home"
+          ><mat-icon
+            (click)="homeIconClick()"
+            id="home-icon"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="home"
+            color="accent"
+          />
+        </a>
+      </li>
+      <li>
+        <a routerLink="/about"
+          ><mat-icon
+            id="about-icon"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="description"
+            color="accent"
+            (click)="aboutIconClick()"
+          />
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact"
+          ><mat-icon
+            id="contact-icon"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            fontIcon="call"
+            color="accent"
+            (click)="contactIconClick()"
+        /></a>
+      </li>
+    </ul>
+  </div>
+</div>

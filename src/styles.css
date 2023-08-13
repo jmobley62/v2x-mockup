@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  margin: 100px;
+  background: url(./assets/kuwait1.jpg) fixed;
+  background-size: cover;
+  border: 10px solid rgb(180, 137, 21);
+  height: 100%;
+  overflow-x: hidden;
+}

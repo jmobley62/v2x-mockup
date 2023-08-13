@@ -1,0 +1,33 @@
+#header-container {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 0.5em 0 0.5em 0;
+}
+
+#v2x {
+  width: 10em;
+  height: 3.6em;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  list-style-type: none;
+  font-size: larger;
+}
+
+#home-icon,
+#about-icon,
+#contact-icon {
+  color: rgb(180, 137, 21);
+}
