@@ -7,31 +7,12 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        sh '''pipeline {
-    agent any
-    stages {
-        stage(\'Checkout\') {
-            steps {
-                // Check out your source code from version control here
-            }
-        }
-        stage(\'Build with Maven\') {
-            steps {
-                sh \'test\'
-            }
-        }
-        stage(\'Additional Stages\') {
-            steps {
-                // Add any other necessary stages here
-            }
-        }
-    }
-}
+        sh '''mvn package
 '''
-        }
       }
-
     }
+
   }
+}
