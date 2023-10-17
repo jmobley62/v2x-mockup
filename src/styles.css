@@ -1,9 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-  margin: 100px;
+  margin: 0;
   background: url(./assets/kuwait1.jpg) fixed;
   background-size: cover;
   border: 10px solid rgb(180, 137, 21);
-  height: 100%;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
