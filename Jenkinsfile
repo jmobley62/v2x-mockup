@@ -7,12 +7,5 @@ pipeline {
       }
     }
 
-    stage('error') {
-      steps {
-        sh '''mvn package
-'''
-      }
-    }
-
   }
 }
