@@ -9,14 +9,14 @@ pipeline {
 
     stage('Maven install') {
       steps {
-        sh '''                   // Download and extract Apache Maven
-                    sh \'\'\'
-                        get http://apache.mirror.gtcomm.net/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
-                        tar -xzf apache-maven-3.8.4-bin.tar.gz
-                    \'\'\'
-                    // Set Maven environment variables
-                    env.MAVEN_HOME = "${workspace}/apache-maven-3.8.4"
-                    env.PATH = "${env.MAVEN_HOME}/bin:${env.PATH}"'''
+        sh '''Â  Â  Â  Â  Â  Â  Â  Â  Â  Â // Download and extract Apache Maven
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  sh \'\'\'
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  get http://apache.mirror.gtcomm.net/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  tar -xzf apache-maven-3.8.4-bin.tar.gz
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  \'\'\'
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  // Set Maven environment variables
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  env.MAVEN_HOME = "${workspace}/apache-maven-3.8.4"
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  env.PATH = "${env.MAVEN_HOME}/bin:${env.PATH}"'''
       }
     }
 
