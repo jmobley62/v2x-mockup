@@ -9,14 +9,7 @@ pipeline {
 
     stage('Maven install') {
       steps {
-        sh '''                   // Download and extract Apache Maven
-                    sh \'\'\'
-                        get http://apache.mirror.gtcomm.net/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
-                        tar -xzf apache-maven-3.8.4-bin.tar.gz
-                    \'\'\'
-                    // Set Maven environment variables
-                    env.MAVEN_HOME = "${workspace}/apache-maven-3.8.4"
-                    env.PATH = "${env.MAVEN_HOME}/bin:${env.PATH}"'''
+        sh 'brew install maven'
       }
     }
 
