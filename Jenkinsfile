@@ -9,7 +9,7 @@ pipeline {
 
     stage('Maven install') {
       steps {
-        sh 'brew install maven'
+        sh 'sudo install maven'
       }
     }
 
