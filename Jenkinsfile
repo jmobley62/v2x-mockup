@@ -15,6 +15,12 @@ ls'''
       }
     }
 
+    stage('NodeJS') {
+      steps {
+        sh 'npm instal -g '
+      }
+    }
+
   }
   tools {
     maven 'maven3'
