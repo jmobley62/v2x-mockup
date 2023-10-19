@@ -7,9 +7,13 @@ pipeline {
       }
     }
 
-    stage('Log') {
+    stage('Build with Maven') {
       steps {
-        sh 'ls -la'
+        script {
+          docker.image('maven:3.8.3').inside() {
+            sh 'mvn clean install'
+          }
+        }
       }
     }
 
