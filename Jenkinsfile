@@ -24,7 +24,7 @@ pipeline {
 
         stage('Docker') {
           steps {
-            echo "docker place holder!!"
+            sh 'node -v'
           }
         }
 
@@ -33,7 +33,7 @@ pipeline {
 
     stage('Docker Image') {
       steps {
-        sh 'docker -v'
+        sh 'nom install docker'
       }
     }
 
