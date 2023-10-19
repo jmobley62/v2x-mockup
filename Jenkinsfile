@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Maven') {
+    stage('Installs') {
       parallel {
         stage('Maven') {
           steps {
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Docker') {
           steps {
-            echo "docker PLace Holder"
+            echo "docker place holder!!"
           }
         }
 
