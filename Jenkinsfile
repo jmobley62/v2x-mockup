@@ -9,7 +9,7 @@ pipeline {
 
     stage('Maven install') {
       steps {
-        sh 'sudo install maven'
+        withMaven()
       }
     }
 
