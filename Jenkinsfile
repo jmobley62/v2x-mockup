@@ -6,14 +6,5 @@ pipeline {
         git(url: 'https://github.com/jmobley62/v2x-mockup', branch: 'master')
       }
     }
-
-    stage('Build with Maven') {
-      steps {
-        docker.image('maven:3.8.3').inside() {
-          sh 'mvn clean install'
-        }
-      }
-    }
-
   }
 }
