@@ -18,5 +18,7 @@ ls'''
   }
   tools {
     maven 'maven3'
+    nodejs 'node3'
+    docker 'docker3'
   }
 }
