@@ -22,24 +22,13 @@ pipeline {
           }
         }
 
-        stage('Docker') {
-          steps {
-            script {
-              withDockerRegistry(credentialsId: '9425ae75-4440-488f-82f3-82f050455661') {
-                sh 'docker build -t jaquanmobley/jenkins-test:first'
-                sh 'docker push jaquanmobley/jenkins-test:first'
-              }
-            }
-
-          }
-        }
-
       }
     }
 
-    stage('Docker Image') {
+    stage('Maven build') {
       steps {
-        sh 'docker -v'
+        sh '''mvn package
+ls'''
       }
     }
 
