@@ -9,11 +9,9 @@ pipeline {
 
     stage('Build with Maven') {
       steps {
-          docker.image('maven:3.8.3').inside() {
-            sh 'mvn clean install'
-          }
+        docker.image('maven:3.8.3').inside() {
+          sh 'mvn clean install'
         }
-
       }
     }
 
