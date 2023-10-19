@@ -22,6 +22,13 @@ pipeline {
           }
         }
 
+        stage('Docker') {
+          steps {
+            sh '''npm install dockerode
+'''
+          }
+        }
+
       }
     }
 
