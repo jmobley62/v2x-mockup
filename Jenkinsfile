@@ -34,6 +34,7 @@ ls'''
 
   }
   tools {
+    jdk 'jdk3'
     maven 'maven3'
     nodejs 'node3'
   }
