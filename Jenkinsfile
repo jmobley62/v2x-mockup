@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Builds') {
       steps {
         sh '''mvn clean install
 cd Maven_Test/
