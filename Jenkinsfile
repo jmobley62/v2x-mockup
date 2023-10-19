@@ -33,7 +33,7 @@ pipeline {
 
     stage('Docker Image') {
       steps {
-        sh 'nom install docker'
+        sh 'npm install docker'
       }
     }
 
