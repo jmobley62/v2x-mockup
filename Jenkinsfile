@@ -24,7 +24,7 @@ pipeline {
 
         stage('Docker') {
           steps {
-            sh 'node -v'
+            sh 'npm install docker'
           }
         }
 
@@ -33,7 +33,7 @@ pipeline {
 
     stage('Docker Image') {
       steps {
-        sh 'npm install docker'
+        sh 'docker build -f v2x-mockup/Dockerfile .'
       }
     }
 
