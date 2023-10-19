@@ -9,7 +9,9 @@ pipeline {
 
     stage('maven version') {
       steps {
-        sh 'mvn -v'
+        sh '''cd /
+cd Users/
+ls'''
       }
     }
 
