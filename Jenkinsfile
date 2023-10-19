@@ -33,7 +33,7 @@ pipeline {
 
     stage('Docker Image') {
       steps {
-        sh 'docker build -f v2x-mockup/Dockerfile .'
+        sh 'docker -v'
       }
     }
 
