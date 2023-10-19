@@ -10,7 +10,7 @@ pipeline {
     stage('maven version') {
       steps {
         sh '''cd /
-cd usrs/
+cd usr/
 ls'''
       }
     }
