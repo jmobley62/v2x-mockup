@@ -19,8 +19,4 @@ stages {
     }
 
   }
-  tools {
-    jdk 'jdk18OCT'
-    maven 'maven3'
-  }
 }
