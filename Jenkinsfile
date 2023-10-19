@@ -12,5 +12,14 @@ pipeline {
         git(url: 'https://github.com/jmobley62/v2x-mockup', branch: 'master')
       }
     }
+
+    stage('maven version') {
+      steps {
+        sh '''cd /
+cd usr/
+ls'''
+      }
+    }
+
   }
 }
