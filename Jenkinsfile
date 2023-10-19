@@ -24,8 +24,12 @@ pipeline {
 
         stage('Docker') {
           steps {
-            sh '''npm install dockerode
-'''
+            script{
+              withDockerRegistry(credentialsId: '9425ae75-4440-488f-82f3-82f050455661') {
+                sh 'docker build -t v2x-mockup/Dockerfile .'
+                sh 'docker tag v2x-mockup:latest'
+              }
+            }
           }
         }
 
