@@ -7,17 +7,27 @@ pipeline {
       }
     }
 
-    stage('Builds') {
-      steps {
-        sh '''mvn clean install
-cd Maven_Test/
-ls'''
+    stage('Maven') {
+      parallel {
+        stage('Maven') {
+          steps {
+            sh '''mvn clean install
+'''
+          }
+        }
+
+        stage('NodeJS') {
+          steps {
+            sh 'npm instal -g�'
+          }
+        }
+
       }
     }
 
-    stage('NodeJS') {
+    stage('Docker Image') {
       steps {
-        sh 'npm instal -g�'
+        sh 'docker build -f v2x-mockup/Dockerfile .'
       }
     }
 
