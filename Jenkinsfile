@@ -17,7 +17,7 @@ ls'''
 
     stage('NodeJS') {
       steps {
-        sh 'npm instal -g '
+        sh 'npm instal -gï¿½'
       }
     }
 
@@ -25,6 +25,5 @@ ls'''
   tools {
     maven 'maven3'
     nodejs 'node3'
-    docker 'docker3'
   }
 }
