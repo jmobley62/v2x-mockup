@@ -32,6 +32,12 @@ ls'''
       }
     }
 
+    stage('Sonar') {
+      steps {
+        withSonarQubeEnv 'sonar3'
+      }
+    }
+
   }
   tools {
     jdk 'jdk3'
