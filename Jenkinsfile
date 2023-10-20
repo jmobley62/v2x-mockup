@@ -34,7 +34,7 @@ ls'''
 
     stage('Sonar') {
       steps {
-        withSonarQubeEnv 'sonar3'
+        withSonarQubeEnv(installationName: 'sonar3', envOnly: true)
       }
     }
 
