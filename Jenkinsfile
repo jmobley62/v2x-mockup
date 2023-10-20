@@ -34,7 +34,10 @@ ls'''
 
     stage('Sonar') {
       steps {
-        withSonarQubeEnv(installationName: 'sonar3', envOnly: true)
+        withSonarQubeEnv('sonar3') {
+          sh 'mvn clean sonar:sonar'
+        }
+
       }
     }
 
