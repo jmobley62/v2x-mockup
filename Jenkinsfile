@@ -25,19 +25,18 @@ pipeline {
       }
     }
 
-    stage('Maven build') {
-      steps {
-        sh '''mvn package
-ls'''
-      }
-    }
-
     stage('Sonar') {
       steps {
         withSonarQubeEnv('sonar3') {
           sh 'npm install -g sonarqube-scanner'
         }
 
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'mvn clean sonar:sonar'
       }
     }
 
