@@ -36,7 +36,9 @@ pipeline {
 
     stage('Docker') {
       steps {
-        sh '''// Build the Docker image
+        sh '''sudo su -
+
+// Build the Docker image
 docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} .
 
 
