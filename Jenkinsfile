@@ -18,7 +18,7 @@ pipeline {
 
         stage('NodeJS') {
           steps {
-            sh 'npm instal -gï¿½'
+            sh 'npm instal -gÃ¯Â¿Â½'
           }
         }
 
@@ -36,11 +36,7 @@ pipeline {
 
     stage('Docker') {
       steps {
-        sh '''// Use the configured Docker installation
-def dockerTool = tool name: \'your-docker-tool-name\', type: \'DockerTool\'
-                    
-// Push the Docker image to a registry (if needed)
-sh "${dockerTool}/docker push your-image-name"'''
+        sh 'docker -v'
       }
     }
 
