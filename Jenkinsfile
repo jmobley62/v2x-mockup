@@ -18,17 +18,25 @@ pipeline {
 
         stage('NodeJS') {
           steps {
-            sh 'npm instal -g�'
+            sh 'npm instal -gï¿½'
           }
         }
 
       }
     }
 
-    stage('Maven build') {
+    stage('Sonar') {
       steps {
-        sh '''mvn package
-ls'''
+        withSonarQubeEnv('sonar3') {
+          sh 'npm install -g sonarqube-scanner'
+        }
+
+      }
+    }
+
+    stage('Docker') {
+      steps {
+        sh 'docker -v'
       }
     }
 
