@@ -35,7 +35,7 @@ ls'''
     stage('Sonar') {
       steps {
         withSonarQubeEnv('sonar3') {
-          sh 'mvn clean sonar:sonar'
+          sh 'npm install -g sonarqube-scanner'
         }
 
       }
