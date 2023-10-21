@@ -34,9 +34,13 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Docker') {
       steps {
-        sh 'mvn clean sonar:sonar'
+        sh '''// Use the configured Docker installation
+def dockerTool = tool name: \'your-docker-tool-name\', type: \'DockerTool\'
+                    
+// Push the Docker image to a registry (if needed)
+sh "${dockerTool}/docker push your-image-name"'''
       }
     }
 
